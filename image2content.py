@@ -18,9 +18,6 @@ def images_to_single_markdown(image_folder, output_file):
         return
 
     with open(output_file, 'w', encoding='utf-8') as md:
-        md.write("# 图片文字提取汇总\n\n")
-        md.write(f"> 提取总数: {len(image_files)} 张\n\n---\n\n")
-
         for idx, filename in enumerate(image_files, 1):
             img_path = os.path.join(image_folder, filename)
             print(f"[{idx}/{len(image_files)}] 正在处理: {filename}...")
